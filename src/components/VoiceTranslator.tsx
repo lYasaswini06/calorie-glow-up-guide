@@ -33,8 +33,8 @@ const VoiceTranslator: React.FC<VoiceTranslatorProps> = ({ onTranslation }) => {
       return;
     }
 
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
+    const SpeechRecognitionConstructor = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognitionConstructor();
     
     recognition.continuous = false;
     recognition.interimResults = false;
@@ -50,7 +50,7 @@ const VoiceTranslator: React.FC<VoiceTranslatorProps> = ({ onTranslation }) => {
       console.log('Speech recognition started');
     };
 
-    recognition.onresult = (event) => {
+    recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript;
       setOriginalText(transcript);
       console.log('Speech recognized:', transcript);
@@ -60,7 +60,7 @@ const VoiceTranslator: React.FC<VoiceTranslatorProps> = ({ onTranslation }) => {
       });
     };
 
-    recognition.onerror = (event) => {
+    recognition.onerror = (event: any) => {
       console.error('Speech recognition error:', event.error);
       toast({
         title: "Speech Recognition Error",
