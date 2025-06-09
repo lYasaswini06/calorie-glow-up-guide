@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Moon, Sun, Volume2, VolumeX } from 'lucide-react';
+import { Moon, Sun, Volume2, VolumeX, Mic } from 'lucide-react';
 import { ThemeProvider, useTheme } from '../contexts/ThemeContext';
+import { Link } from 'react-router-dom';
 import CalorieCalculator from '../components/CalorieCalculator';
 import FloatingEmojis from '../components/FloatingEmojis';
 import Confetti from '../components/Confetti';
@@ -48,6 +49,17 @@ const IndexContent = () => {
               {emojisEnabled ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
             </Button>
           </div>
+          
+          <Link to="/voice-translator">
+            <Button
+              variant="outline"
+              size="sm"
+              className="animate-glow glassmorphism border-none"
+            >
+              <Mic className="h-4 w-4 mr-2" />
+              Voice Translator
+            </Button>
+          </Link>
         </div>
       </div>
 
