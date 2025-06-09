@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# 🥗 Calorie & Macro Needs Estimator
 
-## Project info
+An interactive and visually vibrant AI-powered web app that helps users calculate their **daily calorie requirements** and **macronutrient breakdown** (carbohydrates, proteins, fats) based on their gender, age, height, weight, and activity level. Built for those who want to understand and improve their health in a fun, personalized, and beautiful way.
 
-**URL**: https://lovable.dev/projects/a8a38b3a-0d1b-4950-8b4a-f93bcd2aae05
+---
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+- 🎨 **Gradient Theme**: Vibrant pink-purple-blue background flowing from bottom to top
+- 🌙 **Light/Dark Mode**: Toggle with blinking glow animation
+- 🧮 **Inputs**:
+  - Gender selection (Male, Female, Other)
+  - Age (in years)
+  - Height (in cm)
+  - Weight (in kg)
+  - Activity level (Sedentary to Super Active)
+- 📊 **Outputs**:
+  - Total Daily Energy Expenditure (Calories/day)
+  - Macronutrient split (in grams): Carbs, Protein, Fat
+  - Visual **Pie Chart** for macro distribution
+- 🤖 **AI Suggestions**:
+  - Recommended meal ideas based on calculated macros
+  - Smart tips for improving your diet and routine
+- 💡 **Floating Emojis**: Wholesome food and health emojis for a lovable touch
+- 💫 **Animated Headings**: Engaging sliding and bouncing headings
+- ✨ **Floating Buttons**: Neumorphic or glassmorphism styled interactive buttons
+- 📝 **User Tips Section**: Smartly tailored health & wellness suggestions
+- 📦 **Responsive & Modern UI**: Works beautifully across all devices
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8a38b3a-0d1b-4950-8b4a-f93bcd2aae05) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend**: HTML, CSS, JavaScript *(or React.js if applicable)*
+- **Styling**: Custom CSS Animations, Gradients, Glassmorphism, Neumorphism
+- **Charts**: [Chart.js](https://www.chartjs.org/) or [Recharts](https://recharts.org/)
+- **AI Add-on**: Optional OpenAI integration or static logic-based suggestions
+- **Theme Toggle**: JavaScript + localStorage
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📈 How It Works
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. The user inputs their **basic stats and activity level**
+2. The app calculates BMR using **Mifflin-St Jeor Equation**
+3. It multiplies BMR with an **activity multiplier** to get TDEE
+4. Then breaks down calories into **macros**:
+   - Carbs: 50%
+   - Protein: 25%
+   - Fat: 25%
+5. Displays results along with **animated tips** and meal suggestions
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📋 Benefits
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a8a38b3a-0d1b-4950-8b4a-f93bcd2aae05) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Helps track and manage calorie intake effectively
+- Gives an easy start to building healthy eating habits
+- Understand your body’s energy needs with just a few clicks
+- Encourages consistent wellness routines
+- Beautiful, engaging interface for better user experience
